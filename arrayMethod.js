@@ -15,11 +15,11 @@ const lastNames = users.map(user => user.lastName)
 
 const name10 = users.filter(user => user.logins > 10).map(user => user.lastName)
 
-const totalLogins = users.reduce(function(logins, total) 
+const totalLogins = users.reduce(function(total) 
     {
-        cons total + logins;
+        const total = total + users.logins
     }
-, 0)
+)
 
 
 console.log(userJ)
