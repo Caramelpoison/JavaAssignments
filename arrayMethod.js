@@ -9,16 +9,16 @@ const users = [
     {id: 3879, firstName: 'Ira', lastName: 'Bolislovitz', logins: 9, isPremiumMember: false}
 ];
 
-const userJ = users.find(user => user.firstName = "Jose")
-const premiumMem = users.filter(user => user.isPremiumMember = true)
+const userJ = users.find(user => user.firstName == "Jose")
+const premiumMem = users.filter(user => user.isPremiumMember == true)
 const lastNames = users.map(user => user.lastName)
 
 const name10 = users.filter(user => user.logins > 10).map(user => user.lastName)
 
-const totalLogins = users.reduce(function(total) 
+const totalLogins = users.reduce(function(total, user) 
     {
-        const total = total + users.logins
-    }
+        return total = total + user.logins
+    },0
 )
 
 
@@ -43,5 +43,8 @@ console.log("")
 
 console.log(name10);
 
+console.log("")
+console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
+console.log("")
 
 console.log(totalLogins)
