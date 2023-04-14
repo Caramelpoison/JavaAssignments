@@ -1,6 +1,7 @@
 function outer(){
     let a = "Alex";
 
+    
     let b = {
         name: "Alexia"
     };
