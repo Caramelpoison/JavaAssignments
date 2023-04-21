@@ -19,7 +19,7 @@ function hideStuff()
 //This one gets it all
 function getAll() {
     hideStuff()
-    fetch('https://jsonplaceholder.typicode.com/posts')
+    fetcher
       .then(response => response.json())
       .then(json => fetched(json))
   }
