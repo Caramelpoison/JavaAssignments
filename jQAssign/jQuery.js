@@ -11,22 +11,26 @@ $('#submit').click(function(event){
             let empty = $('#message')
             empty.text("Please Fill Out Required Fields")
             $('label').addClass('warning')
+            $('#name, #phone, #email, #message-area').on('keyup', function() {
+            
+                if ($(this).val() !== '') {
+                  $(this).prev('label').removeClass('warning');
+                }
+                else{
+                    $(this).prev('label').addClass('warning');
+                }
+            });
         }  
+    
+
+   
+      
     }
-
-    $('#name, #phone, #email, #message-area').on('keyup', function() {
-        if ($(this).val() !== '') {
-          $(this).prev('label').removeClass('warning');
-        }
-        else{
-            $(this).prev('label').addClass('warning');
-        }
-      });
-
     if ( $('label').hasClass('warning') == false)
     {
         $('#form').remove()
         $('h3').remove()
+        $('#message').remove()
         $('h2').text("Thanks for your feedback!")
     }
 })
